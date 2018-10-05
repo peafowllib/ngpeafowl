@@ -1,0 +1,15 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/node_modules
+*.config
+/obj/Debug
+/dist/out-tsc
+/ngpeafowl.csproj
+*.map
+/package-lock.json
+/demo
+/angular.json
+/bs-config.cli.json
+/tslint.json

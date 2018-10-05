@@ -1,0 +1,19 @@
+﻿<pf-dg-header *ngIf="option.title" [pf-title]="option.title" [pf-show-close]="option.closeIcon">
+</pf-dg-header>
+<pf-dg-content>
+    <ng-template pfPortalHost #portalHostContent></ng-template>
+</pf-dg-content>
+<pf-dg-footer>
+    <ng-template pfPortalHost #portalHostFooter></ng-template>
+</pf-dg-footer>
+
+<ng-template #templateContent>
+    <div [innerHtml]="content"></div>
+</ng-template>
+<ng-template #templateFooterAlert>
+    <input type="button" class="pf-dg-btn" name="btnOk" value="Ok" (click)="onActionClicked(1)" />
+</ng-template>
+<ng-template #templateFooterConfirm>
+    <input type="button" class="pf-dg-btn" name="btnOk" [value]="option.buttonText.confirm" (click)="onActionClicked(0)" />
+    <input type="button" class="pf-dg-btn pf-dg-btn-cancel" name="btnCancel" [value]="option.buttonText.cancel" (click)="onActionClicked(1)" />
+</ng-template>
